@@ -29,4 +29,4 @@ RUN wget https://download.serviio.org/releases/serviio-${VERSION}-linux.tar.gz &
 
 RUN     rm -rf /var/cache/apk/*
 
-CMD tail -f /opt/serviio/log/serviio.log & /opt/serviio/bin/./serviio.sh
+CMD ["tail", "-f", "/opt/serviio/log/serviio.log", "&", "/opt/serviio/bin/./serviio.sh"]
